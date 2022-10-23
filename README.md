@@ -6,6 +6,13 @@
 This project was generated with [Ionic CLI](https://ionicframework.com/docs/developing/starting) version 6
 
 APP: 
+Hosting URL: https://social-sport-app.web.app
+
+RENT:
+Hosting URL: https://social-sport-rent.web.app
+
+ADMIN:
+Hosting URL: https://social-sport-app.web.app
 
 ## Config Environments
 
