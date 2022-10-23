@@ -18,9 +18,14 @@
     },
     "admin": {
       "name": "admin",
-      "integrations": {},
+      "integrations": {
+        "capacitor": {}
+      },
       "type": "angular",
       "root": "projects/admin"
     }
+  },
+  "integrations": {
+    "capacitor": {}
   }
 }

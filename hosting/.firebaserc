@@ -1,0 +1,21 @@
+{
+  "projects": {
+    "default": "test-social-sport-app"
+  },
+  "targets": {
+    "test-social-sport-app": {
+      "hosting": {
+        "app": [
+          "social-sport-app"
+        ],
+        "admin": [
+          "social-sport-admin"
+        ],
+        "rent": [
+          "social-sport-rent"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
