@@ -1,0 +1,19 @@
+<form [formGroup]="loginForm" (ngSubmit)="doLogin()" novalidate style="padding: 10%">
+  
+    <ion-item lines="full">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="email" type="email" required></ion-input>
+    </ion-item>
+    <br/>
+    <ion-item lines="full">
+        <ion-label position="floating">Password</ion-label>
+        <ion-input formControlName="password" type="text" required></ion-input>
+    </ion-item>
+    <br/>
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  
+  </form>

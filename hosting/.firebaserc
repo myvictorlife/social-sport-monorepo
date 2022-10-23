@@ -11,8 +11,8 @@
         "admin": [
           "social-sport-admin"
         ],
-        "rent": [
-          "social-sport-rent"
+        "lessor": [
+          "social-sport-lessor"
         ]
       }
     }

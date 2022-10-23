@@ -8,8 +8,8 @@ This project was generated with [Ionic CLI](https://ionicframework.com/docs/deve
 APP: 
 Hosting URL: https://social-sport-app.web.app
 
-RENT:
-Hosting URL: https://social-sport-rent.web.app
+LESSOR:
+Hosting URL: https://social-sport-lessor.web.app
 
 ADMIN:
 Hosting URL: https://social-sport-app.web.app
