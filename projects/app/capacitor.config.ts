@@ -3,7 +3,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 const config: CapacitorConfig = {
   appId: 'social.sport.app',
   appName: 'app',
-  webDir: 'www',
+  webDir: '../../dist/projects/app',
   bundledWebRuntime: false
 };
 
