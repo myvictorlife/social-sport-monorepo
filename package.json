@@ -18,7 +18,8 @@
     "build:auth-lib:watch": "ng build authLib --watch",
     "build:all": "npm run build:auth-lib && npm run build:app:browser:prod && npm run build:rent:browser:prod && npm run build:admin:browser:prod",
     "test": "ng test",
-    "deploy:all:hosting": "npm run build:all && cp -r ./dist ./hosting/ && cd ./hosting && firebase deploy --only hosting"
+    "deploy:all:hosting": "npm run build:all && cp -r ./dist ./hosting/ && cd ./hosting && firebase deploy --only hosting",
+    "deploy:firebase:pipeline": "npm run build:all && cp -r ./dist ./hosting"
   },
   "private": true,
   "dependencies": {

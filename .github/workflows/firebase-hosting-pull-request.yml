@@ -13,7 +13,7 @@ jobs:
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
-      - run: npm ci
+      - run: npm ci && npm run deploy:firebase:pipeline
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
