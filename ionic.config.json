@@ -2,23 +2,30 @@
   "projects": {
     "app": {
       "name": "app",
+      "type": "angular",
+      "root": "projects/app",
       "integrations": {
         "capacitor": {}
-      },
-      "type": "angular",
-      "root": "projects/app"
+      }
     },
     "rent": {
       "name": "rent",
-      "integrations": {},
+      "integrations": {
+        "capacitor": {}
+      },
       "type": "angular",
       "root": "projects/rent"
     },
     "admin": {
       "name": "admin",
-      "integrations": {},
+      "integrations": {
+        "capacitor": {}
+      },
       "type": "angular",
       "root": "projects/admin"
     }
+  },
+  "integrations": {
+    "capacitor": {}
   }
 }
