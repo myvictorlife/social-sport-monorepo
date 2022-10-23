@@ -1,4 +1,4 @@
-name: Ionic Build Browser
+name: Ionic Build Android
 on:
   push:
     branches:
@@ -23,4 +23,4 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build:all
+        run: npm run build:app:android
