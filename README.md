@@ -1,10 +1,72 @@
-# SocialSport
+# Social Sport
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.6.
+![Build](https://github.com/myvictorlife/social-sport-monorepo/actions/workflows/build_v1.yml/badge.svg)
+[![codecov](https://codecov.io/gh/myvictorlife/social-sport-monorep/branch/main/graph/badge.svg)](https://codecov.io/gh/myvictorlife/sidequest-xp)
+
+This project was generated with [Ionic CLI](https://ionicframework.com/docs/developing/starting) version 6
+
+APP: 
+
+## Config Environments
+
+baseURL: ''
+
+
+## Paths
+
+App:
+
+    $ @app-store // Store
+    $ @app-services // Services
+    $ @app-core // Core
+    $ @environment // Configuration (project, languages, hosts, ...)
+    
+Admin:
+    
+    $ @admin-store // Store
+
+
+## Tools
+
+    $ @ngrx/store // State Management
+    $ @ngrx/effects // Side effect model for Store
+    $ @ngrx/entity // Entity State adapter for managing record collections.
+    $ @ngx-translate // Text Translations
+    $ @angular/material // Material Design components for Angular
+    $ rxjs // RxJS is a library for reactive programming using Observables
+    $ jest // Unit Tests
+    $ Spectator // Spectator helps you get rid of all the boilerplate grunt work, leaving you with readable, sleek and streamlined unit tests.
+
+## CI/CD
+
+    $ build_v1.yml // Install, Build, Lint and Test
+    $ codecov.yml // Running Test Coverage
+    $ firebase-hosting-merge.yml // Deploy to Firebase Hosting on merge
+    $ firebase-hosting-pull-request.yml // Deploy to Firebase Hosting on PR
+
+## Installation
+
+Install the dependencies and devDependencies and start the server.
+
+    $ Node.js +v16.16.0 to run.
+
+## Start project
+
+Runs the app in the development mode. Open http://localhost:4200 to view it in the browser.
+
+The page will reload if you make edits. You will also see any lint errors in the console.
+
+## Running the project
+
+    $ npm install
+    $ npm start
+    $ npm run test
+    $ npm run test:coverage
+    $ npm run lint
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
@@ -16,11 +78,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Run `ng test` to execute the unit tests via [Jest](https://jestjs.io/).
 
 ## Further help
 
