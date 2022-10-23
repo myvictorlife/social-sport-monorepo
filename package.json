@@ -22,7 +22,7 @@
     "build:app:ios": "npm run remove:ios && ionic capacitor build ios --project=app --no-open",
     "test": "ng test",
     "deploy:all:hosting": "npm run build:all && npm run copy:dist:folder && cd ./hosting && firebase deploy --only hosting",
-    "deploy:firebase:pipeline": "npm run build:all && cp -r ./dist ./hosting",
+    "deploy:firebase:pipeline": "npm run build:all && npm run copy:dist:folder",
     "copy:dist:folder": "cp -r ./dist ./hosting/"
   },
   "private": true,
