@@ -1,0 +1,30 @@
+parameters:
+  - name: keystoreFileName
+    displayName: "The keystore file name for signing the apk"
+    type: string
+  - name: keystorePassword
+    displayName: "Password for the keystore"
+    type: string
+  - name: keyAlias
+    displayName: "Key alias"
+    type: string
+  - name: keyPassword
+    displayName: "Key password"
+
+steps:    
+  - script: npm install -g @ionic/cli
+    displayName: 'Install Ionic CLI'
+
+  - task: Npm@1
+    inputs:
+      workingDir: '$(Build.SourcesDirectory)/$(projectName)'
+      command: install
+    displayName: 'NPM Install'
+
+  - powershell: |
+      npm run build:app:android
+      npx cap sync
+      cd projects/app/android
+      ./gradlew assemble$(buildConfiguration)
+    workingDirectory: $(Build.SourcesDirectory)/$(projectName)
+    displayName: 'Build Android Project'
