@@ -19,4 +19,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_SOCIAL_SPORT_APP }}'
           projectId: test-social-sport-app
-          path: "./hosting" # Action will cd into this path before running
+          entryPoint: "./hosting" # Action will cd into this path before running
