@@ -6,6 +6,8 @@
 /out-tsc
 /bazel-out
 /hosting/dist
+/projects/app/android
+/projects/app/ios
 
 # Node
 /node_modules

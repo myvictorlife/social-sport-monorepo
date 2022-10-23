@@ -20,7 +20,10 @@
       "auth-lib": [
         "../auth-lib/src/public-api"
       ]
-    }
+    },
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
