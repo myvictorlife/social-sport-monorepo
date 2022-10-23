@@ -1,4 +1,4 @@
-name: Install, Build, Lint and Test
+name: Ionic Build Browser
 on:
   push:
     branches:
