@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm ci && npm run build:all
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_SOCIAL_SPORT_APP }}'
           channelId: live
           projectId: test-social-sport-app
-          entrypoint: /hosting
+          path: "./hosting" # Action will cd into this path before running

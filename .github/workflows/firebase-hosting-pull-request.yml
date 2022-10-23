@@ -13,9 +13,10 @@ jobs:
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
-      - run: npm ci && npm run build:all
+      - run: npm ci
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TEST_SOCIAL_SPORT_APP }}'
           projectId: test-social-sport-app
+          path: "./hosting" # Action will cd into this path before running
