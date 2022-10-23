@@ -9,4 +9,8 @@ export class HomePage {
 
   constructor() {}
 
+  doLogin(event: any) {
+    console.log(event);
+  }
+
 }

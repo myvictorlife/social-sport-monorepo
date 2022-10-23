@@ -1,10 +1,10 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "defaultProject": "rent",
+  "defaultProject": "lessor",
   "newProjectRoot": "projects",
   "projects": {
-    "rent": {
+    "lessor": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -14,7 +14,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "../../dist/projects/rent",
+            "outputPath": "../../dist/projects/lessor",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,11 +73,11 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rent:build"
+            "browserTarget": "lessor:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rent:build:production"
+              "browserTarget": "lessor:build:production"
             },
             "ci": {
               "progress": false
@@ -87,7 +87,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rent:build"
+            "browserTarget": "lessor:build"
           }
         },
         "test": {
@@ -132,14 +132,14 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rent:serve"
+            "devServerTarget": "lessor:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rent:serve:production"
+              "devServerTarget": "lessor:serve:production"
             },
             "ci": {
-              "devServerTarget": "rent:serve:ci"
+              "devServerTarget": "lessor:serve:ci"
             }
           }
         }

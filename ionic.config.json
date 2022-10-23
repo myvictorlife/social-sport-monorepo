@@ -8,13 +8,13 @@
         "capacitor": {}
       }
     },
-    "rent": {
-      "name": "rent",
+    "lessor": {
+      "name": "lessor",
       "integrations": {
         "capacitor": {}
       },
       "type": "angular",
-      "root": "projects/rent"
+      "root": "projects/lessor"
     },
     "admin": {
       "name": "admin",

@@ -16,8 +16,8 @@
       ]
     },
     {
-      "target": "rent",
-      "public": "dist/projects/rent", 
+      "target": "lessor",
+      "public": "dist/projects/lessor", 
       "ignore": [
         "firebase.json",
         "**/.*",
