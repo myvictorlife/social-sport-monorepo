@@ -20,9 +20,9 @@ steps:
       workingDir: '$(Build.SourcesDirectory)/$(projectName)'
       command: install
     displayName: 'NPM Install'
-
-  - name: Use coturiv/setup-ionic
-    uses: coturiv/setup-ionic@v1
+    
+# - name: Use coturiv/setup-ionic
+#   uses: coturiv/setup-ionic@v1
 
   - powershell: |
       npm run build:app:android
