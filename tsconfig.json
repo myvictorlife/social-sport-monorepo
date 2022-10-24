@@ -7,7 +7,7 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "entity-lib": [
-        "../project/libs/entity-lib"
+        "dist/libs/entity-lib"
       ]
     },
     "strict": true,
