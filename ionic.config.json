@@ -3,7 +3,7 @@
     "app": {
       "name": "app",
       "type": "angular",
-      "root": "projects/app",
+      "root": "apps/app",
       "integrations": {
         "capacitor": {}
       }
@@ -14,7 +14,7 @@
         "capacitor": {}
       },
       "type": "angular",
-      "root": "projects/lessor"
+      "root": "apps/lessor"
     },
     "admin": {
       "name": "admin",
@@ -22,7 +22,7 @@
         "capacitor": {}
       },
       "type": "angular",
-      "root": "projects/admin"
+      "root": "apps/admin"
     }
   },
   "integrations": {

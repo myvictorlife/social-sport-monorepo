@@ -1,25 +1,25 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
-  "newProjectRoot": "projects",
+  "newProjectRoot": "libs",
   "projects": {
     "authLib": {
       "projectType": "library",
-      "root": "projects/auth-lib",
-      "sourceRoot": "projects/auth-lib/src",
+      "root": "apps/auth-lib",
+      "sourceRoot": "libs/auth-lib/src",
       "prefix": "auth",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/auth-lib/ng-package.json"
+            "project": "libs/auth-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/auth-lib/tsconfig.lib.prod.json"
+              "tsConfig": "libs/auth-lib/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/auth-lib/tsconfig.lib.json"
+              "tsConfig": "libs/auth-lib/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,30 +27,30 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/auth-lib/src/test.ts",
-            "tsConfig": "projects/auth-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/auth-lib/karma.conf.js"
+            "main": "libs/auth-lib/src/test.ts",
+            "tsConfig": "libs/auth-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/auth-lib/karma.conf.js"
           }
         }
       }
     },
     "entity-lib": {
       "projectType": "library",
-      "root": "projects/entity-lib",
-      "sourceRoot": "projects/entity-lib/src",
+      "root": "libs/entity-lib",
+      "sourceRoot": "libs/entity-lib/src",
       "prefix": "entity",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/entity-lib/ng-package.json"
+            "project": "libs/entity-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/entity-lib/tsconfig.lib.prod.json"
+              "tsConfig": "libs/entity-lib/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/entity-lib/tsconfig.lib.json"
+              "tsConfig": "libs/entity-lib/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -58,9 +58,9 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/entity-lib/src/test.ts",
-            "tsConfig": "projects/entity-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/entity-lib/karma.conf.js"
+            "main": "libs/entity-lib/src/test.ts",
+            "tsConfig": "libs/entity-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/entity-lib/karma.conf.js"
           }
         }
       }

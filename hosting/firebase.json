@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "app",
-      "public": "dist/projects/app", 
+      "public": "dist/apps/app", 
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -17,7 +17,7 @@
     },
     {
       "target": "lessor",
-      "public": "dist/projects/lessor", 
+      "public": "dist/apps/lessor", 
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -32,7 +32,7 @@
     },
     {
       "target": "admin",
-      "public": "dist/projects/admin", 
+      "public": "dist/apps/admin", 
       "ignore": [
         "firebase.json",
         "**/.*",
