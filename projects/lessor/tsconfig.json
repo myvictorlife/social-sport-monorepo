@@ -19,6 +19,9 @@
       ],
       "auth-lib": [
         "../auth-lib/src/public-api"
+      ],
+      "entity-lib": [
+        "../entity-lib/src/public-api"
       ]
     },
     "strictPropertyInitialization": false,
