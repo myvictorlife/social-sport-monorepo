@@ -18,20 +18,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Cache node modules
-        id: cache-nodemodules
-        uses: actions/cache@v2
-        env:
-          cache-name: cache-node-modules
-        with:
-          # caching node_modules
-          path: node_modules
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+      - name: Use coturiv/setup-ionic
+        uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm runn build:entity-lib && npm run build:auth-lib
+        run: npm run build:all
