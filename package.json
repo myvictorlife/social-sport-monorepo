@@ -17,6 +17,8 @@
     "build:admin:prod": "ionic build --project=admin --prod",
     "build:auth-lib": "ng build authLib",
     "build:auth-lib:watch": "ng build authLib --watch",
+    "build:entity-lib": "ng build entity-lib",
+    "build:entity-lib:watch": "ng build entityLib --watch",
     "build:all": "npm run build:auth-lib && npm run build:app:browser:prod && npm run build:lessor:browser:prod && npm run build:admin:browser:prod",
     "build:app:android": "npm run remove:android && ionic capacitor build android --project=app --no-open",
     "build:app:ios": "npm run remove:ios && ionic capacitor build ios --project=app --no-open",

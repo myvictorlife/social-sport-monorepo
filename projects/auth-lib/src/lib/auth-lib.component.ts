@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { LoginRequest } from 'entity-lib';
 
 export interface Login {
   email: string,
@@ -15,7 +16,7 @@ export interface Login {
 export class AuthLibComponent implements OnInit {
 
   loginForm: FormGroup;
-  @Output() loginFormChange = new EventEmitter<Login>();
+  @Output() loginFormChange = new EventEmitter<LoginRequest>();
 
   constructor() {
     this.loginForm = new FormGroup({

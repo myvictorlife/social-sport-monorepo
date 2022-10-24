@@ -33,6 +33,37 @@
           }
         }
       }
+    },
+    "entity-lib": {
+      "projectType": "library",
+      "root": "projects/entity-lib",
+      "sourceRoot": "projects/entity-lib/src",
+      "prefix": "entity",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/entity-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/entity-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/entity-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/entity-lib/src/test.ts",
+            "tsConfig": "projects/entity-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/entity-lib/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "cli": {
