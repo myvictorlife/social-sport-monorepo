@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-          with:
-            fetch-depth: 0
+        with:
+          fetch-depth: 0
       - name: Use coturiv/setup-ionic
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
