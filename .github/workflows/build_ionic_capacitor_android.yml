@@ -18,7 +18,6 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - uses: nrwl/nx-set-shas@v3
       - name: Use coturiv/setup-ionic
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
