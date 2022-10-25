@@ -24,8 +24,8 @@ jobs:
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
+      - uses: nrwl/nx-set-shas@v3
       - name: Run Lint
-        uses: nrwl/nx-set-shas@v3
         run: npm run lint:all:apps
       - name: Build
         run: npm run build:all
