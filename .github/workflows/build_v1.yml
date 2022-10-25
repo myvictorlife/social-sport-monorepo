@@ -25,7 +25,5 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - uses: nrwl/nx-set-shas@v3
-      - name: Run Lint
-        run: npm ci && npm run lint:all:apps
       - name: Build
         run: npm run build:all
