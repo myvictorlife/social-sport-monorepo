@@ -25,7 +25,8 @@
     "test": "ng test",
     "deploy:all:hosting": "npm run build:all && npm run copy:dist:folder && cd ./hosting && firebase deploy --only hosting",
     "deploy:firebase:pipeline": "npm run build:all && npm run copy:dist:folder",
-    "copy:dist:folder": "cp -r ./dist ./hosting/"
+    "copy:dist:folder": "cp -r ./dist ./hosting/",
+    "lint:all:apps": "nx run-many --all --target=lint"
   },
   "private": true,
   "dependencies": {

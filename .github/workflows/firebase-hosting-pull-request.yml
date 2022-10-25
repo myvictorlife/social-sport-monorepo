@@ -16,6 +16,8 @@ jobs:
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
+      - name: Run Lint
+        run: npm run lint:all:apps
       - run: npm ci && npm run deploy:firebase:pipeline
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
