@@ -23,6 +23,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build:app:ios
+        run: npm run build:all:ios
       - name: Run Lint
         run: npm run lint:all:apps

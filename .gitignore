@@ -8,6 +8,10 @@
 /hosting/dist
 /apps/app/android
 /apps/app/ios
+/apps/lessor/android
+/apps/lessor/ios
+/apps/admin/android
+/apps/admin/ios
 
 # Node
 /node_modules
