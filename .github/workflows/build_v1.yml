@@ -26,4 +26,4 @@ jobs:
         run: npm run build:all
       - uses: mansagroup/nrwl-nx-action@v2
         with:
-        targets: lint
+          targets: lint
