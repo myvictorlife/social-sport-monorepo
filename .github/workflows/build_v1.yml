@@ -17,10 +17,13 @@ jobs:
         node_version: [14]
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Use coturiv/setup-ionic
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
+      - uses: nrwl/nx-set-shas@v3
       - name: Build
         run: npm run build:all
