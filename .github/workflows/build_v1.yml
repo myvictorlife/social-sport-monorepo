@@ -22,8 +22,7 @@ jobs:
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
-      - run: npm install -g @nrwl/cli
       - name: Run Lint
-        run: npm run lint:all:apps
+        run: npm install -g @nrwl/cli && npm run lint:all:apps
       - name: Build
         run: npm run build:all
