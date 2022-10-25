@@ -31,12 +31,12 @@
     "build:app:ios": "npm run remove:ios:app && ionic capacitor build ios --project=app --no-open",
     "build:lessor:ios": "npm run remove:ios:lessor && ionic capacitor build ios --project=lessor --no-open",
     "build:admin:ios": "npm run remove:ios:admin && ionic capacitor build ios --project=admin --no-open",
-    "build:all:ios": "npm run build:app:ios && npm run build:lessor:ios && npm runn build:admin:ios",
+    "build:all:ios": "npm run build:app:ios && npm run build:lessor:ios && npm run build:admin:ios",
     "test": "ng test",
     "deploy:all:hosting": "npm run build:all && npm run copy:dist:folder && cd ./hosting && firebase deploy --only hosting",
     "deploy:firebase:pipeline": "npm run build:all && npm run copy:dist:folder",
     "copy:dist:folder": "cp -r ./dist ./hosting/",
-    "lint:all:apps": "npx run-many --all --target=lint -all"
+    "lint:all:apps": "npx nx run-many --all --target=lint -all"
   },
   "private": true,
   "dependencies": {
