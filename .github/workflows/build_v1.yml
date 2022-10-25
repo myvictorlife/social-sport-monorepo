@@ -18,14 +18,12 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-        with:
-          fetch-depth: 0
       - name: Use coturiv/setup-ionic
         uses: coturiv/setup-ionic@v1
       - name: Install Dependencies
         run: npm install
+      - run: npm install -g @nrwl/cli
+      - name: Run Lint
+        run: npm run lint:all:apps
       - name: Build
         run: npm run build:all
-      - uses: mansagroup/nrwl-nx-action@v2
-        with:
-          targets: lint
