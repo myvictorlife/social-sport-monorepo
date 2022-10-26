@@ -37,7 +37,8 @@ export class AuthLibComponent implements OnInit {
     this.authService.doLogin(this.url, loginRequest).pipe(
       map((loginResponse) => this.loginFormChange.emit(loginResponse)),
       catchError((error) => {
-        const loginResponse = { error } as LoginResponse;
+        const loginResponse = { } as LoginResponse;
+        loginResponse.error = error;
         return of(this.loginFormChange.emit(loginResponse));
       })
     ).subscribe();

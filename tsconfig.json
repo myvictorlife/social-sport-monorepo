@@ -12,6 +12,12 @@
       "entity-lib": [
         "dist/libs/entity-lib"
       ],
+      "@app-environment": [
+        "apps/app/src/environments/environment"
+      ],
+      "@admin-environment": [
+        "apps/admin/src/environments/environment"
+      ],
       "@lessor-environment": [
         "apps/lessor/src/environments/environment"
       ],

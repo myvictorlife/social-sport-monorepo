@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LoginRequest, LoginResponse } from 'entity-lib';
-import { map, Observable, of } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 
 @Injectable()
