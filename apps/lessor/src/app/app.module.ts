@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StoreModule } from '@ngrx/store';
 import { metaReducers, reducers } from './core/store';
-import { environment } from 'src/environments/environment';
+import { environment } from '@lessor-environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CoreModule } from './core/core.module';
 import { EffectsModule } from '@ngrx/effects';

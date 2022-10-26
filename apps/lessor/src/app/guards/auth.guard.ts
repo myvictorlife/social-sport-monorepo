@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { CanLoad, Route, Router, UrlSegment, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate,  Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+
+import { isLoggedIn } from '../core/store/login/login.selectors';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuard implements CanLoad {
+export class AuthGuard {
 
-  constructor(private router: Router) {
+  isLoggedIn$ = this.store.select(isLoggedIn);
+  constructor(private router: Router, private store: Store) { }
 
-  }
-  canLoad(
-    route: Route,
-    segments: UrlSegment[]): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    //  this.router.navigate(['/auth']);
-    return true;
-  }
 }

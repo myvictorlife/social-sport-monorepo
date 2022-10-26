@@ -6,9 +6,18 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "paths": {
+      "@angular/*": [
+        "./node_modules/@angular/*"
+      ],
       "entity-lib": [
         "dist/libs/entity-lib"
-      ]
+      ],
+      "@lessor-environment": [
+        "apps/lessor/src/environments/environment"
+      ],
+      "auth-lib": [
+        "dist/libs/auth-lib"
+      ],
     },
     "strict": true,
     "noImplicitOverride": true,
@@ -26,7 +35,10 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
