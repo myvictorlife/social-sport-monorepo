@@ -1,8 +1,8 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "extends": "../../tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -18,10 +18,10 @@
         "./node_modules/@angular/*"
       ],
       "auth-lib": [
-        "../../libs/auth-lib/src/public-api"
+        "dist/libs/auth-lib/src/public-api"
       ],
       "entity-lib": [
-        "../../libs/entity-lib/src/public-api"
+        "dist/libs/entity-lib/src/public-api"
       ]
     },
     "strictPropertyInitialization": false,
