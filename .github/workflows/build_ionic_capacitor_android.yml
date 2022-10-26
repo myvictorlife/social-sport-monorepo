@@ -23,6 +23,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build:all:android
+        run: npm run build:lessor:android
       - name: Run Lint
         run: npm run lint:all:apps
