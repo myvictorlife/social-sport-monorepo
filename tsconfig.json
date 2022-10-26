@@ -23,7 +23,7 @@
       ],
       "auth-lib": [
         "dist/libs/auth-lib"
-      ],
+      ]
     },
     "strict": true,
     "noImplicitOverride": true,
