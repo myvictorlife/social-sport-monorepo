@@ -18,4 +18,5 @@ export const initialState: State = {
 export const reducer = createReducer(
   initialState,
   on(fromLogin.loggedSuccessfully, (state, { loginResponse }) => ({ ...state, loginResponse, loading: false })),
+  on(fromLogin.loggedFailed, (state, { error }) => ({ ...state, error, loading: false })),
 );

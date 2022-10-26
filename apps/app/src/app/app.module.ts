@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { metaReducers, reducers } from './core/store';
-import { environment } from 'src/environments/environment';
+import { environment } from '@app-environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CoreModule } from './core/core.module';
 import { EffectsModule } from '@ngrx/effects';

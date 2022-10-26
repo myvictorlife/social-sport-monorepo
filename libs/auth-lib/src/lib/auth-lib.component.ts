@@ -1,6 +1,8 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { LoginRequest } from 'entity-lib';
+import { LoginRequest, LoginResponse } from 'entity-lib';
+import { catchError, map, of } from 'rxjs';
+import { AuthLibService } from './auth-lib.service';
 
 export interface Login {
   email: string,
@@ -16,9 +18,10 @@ export interface Login {
 export class AuthLibComponent implements OnInit {
 
   loginForm: FormGroup;
-  @Output() loginFormChange = new EventEmitter<LoginRequest>();
+  @Input() url: string = '';
+  @Output() loginFormChange = new EventEmitter<LoginResponse>();
 
-  constructor() {
+  constructor(private authService: AuthLibService) {
     this.loginForm = new FormGroup({
       email: new FormControl(),
       password: new FormControl()
@@ -31,8 +34,14 @@ export class AuthLibComponent implements OnInit {
 
   doLogin() {
     const loginRequest = this.loginForm.getRawValue();
-    console.log(loginRequest);
-    this.loginFormChange.emit(loginRequest);
+    this.authService.doLogin(this.url, loginRequest).pipe(
+      map((loginResponse) => this.loginFormChange.emit(loginResponse)),
+      catchError((error) => {
+        const loginResponse = { } as LoginResponse;
+        loginResponse.error = error;
+        return of(this.loginFormChange.emit(loginResponse));
+      })
+    ).subscribe();
   }
 
 }

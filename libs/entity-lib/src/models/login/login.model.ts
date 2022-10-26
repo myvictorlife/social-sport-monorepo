@@ -10,4 +10,5 @@ export interface LoginResponse {
     roles: string[],
     accessToken: string;
     tokenType: String;
+    error?: any;
 }
