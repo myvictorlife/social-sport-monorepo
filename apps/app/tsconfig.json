@@ -1,37 +1,16 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  // "extends": "./tsconfig.json",
   "extends": "../../tsconfig.json",
-  "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "target": "es2015",
-    "module": "es2020",
-    "lib": ["es2018", "dom"],
-    "paths": {
-      "@angular/*": [
-        "./node_modules/@angular/*"
-      ],
-      "auth-lib": [
-        "dist/libs/auth-lib/src/public-api"
-      ],
-      "entity-lib": [
-        "dist/libs/entity-lib/src/public-api"
-      ]
-    },
-    "strictPropertyInitialization": false,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "outDir": "./out-tsc/app",
+    "types": []
   },
-  "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
-  }
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
 }
