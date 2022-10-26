@@ -26,7 +26,7 @@
     "build:entity-lib:watch": "ng build entity-lib --watch",
     "build:libs": "npm run build:entity-lib && npm run build:auth-lib",
     "build:all": "npm run build:libs && npm run build:app:browser:prod && npm run build:lessor:browser:prod && npm run build:admin:browser:prod",
-    "build:app:android": "npm run remove:andrsoid:app && ionic capacitor build android --project=app --no-open",
+    "build:app:android": "npm run remove:android:app && ionic capacitor build android --project=app --no-open",
     "build:lessor:android": "npm run remove:android:lessor && ionic capacitor build android --project=lessor --no-open",
     "build:admin:android": "npm run remove:android:admin && ionic capacitor build android --project=admin --no-open",
     "build:all:android": "npm run build:app:android && npm run build:lessor:android && npm run build:admin:android",
