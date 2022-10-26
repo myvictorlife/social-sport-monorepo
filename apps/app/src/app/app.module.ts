@@ -8,7 +8,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { StoreModule } from '@ngrx/store';
+import { metaReducers, reducers } from './core/store';
+import { environment } from 'src/environments/environment';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { CoreModule } from './core/core.module';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,7 +21,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot(reducers, { metaReducers }),
+    EffectsModule.forRoot([]),
+    !environment.production ? StoreDevtoolsModule.instrument() : [],
+    // Instrumentation must be imported after importing StoreModule (config is optional)
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: environment.production, // Restrict extension to log-only mode
+    }),
+    CoreModule
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
