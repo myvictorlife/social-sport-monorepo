@@ -4,7 +4,7 @@ import { Court } from "entity-lib";
 @Component({
     selector: 'lessor-court',
     templateUrl: './court.component.html',
-    // changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourtComponent {
 
