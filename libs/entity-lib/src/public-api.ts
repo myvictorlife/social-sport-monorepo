@@ -6,3 +6,4 @@ export * from './models/address/address.model';
 export * from './models/login/login.model';
 export * from './models/user/user.model';
 export * from './models/court/court.model';
+export * from './models/lessor/lessor-user.model';

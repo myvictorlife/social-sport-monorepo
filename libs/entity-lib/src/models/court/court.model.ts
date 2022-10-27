@@ -1,8 +1,12 @@
 import { Address } from "../address/address.model";
 
 export interface Court {
-    courtsAmount: number;
-    courtsForRent: CourtsForRent[];
+    id: 7,
+    nome: string;
+    foto: string;
+    centroEsportivo: number;
+    status: string;
+    tipo: string;
 }
 
 export interface CourtsForRent {

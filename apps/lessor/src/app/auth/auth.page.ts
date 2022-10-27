@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class AuthPage implements OnInit {
 
-  url = environment.baseUrl;
+  url = environment.baseUrl + environment.paths.login;
   constructor(private store: Store, private router: Router) { }
 
   ngOnInit() {
@@ -21,6 +21,7 @@ export class AuthPage implements OnInit {
   doLogin(loginResponse: LoginResponse) {
     if (!loginResponse?.error) {
       this.store.dispatch(fromLogin.loggedSuccessfully({ loginResponse }));
+      localStorage.setItem('token', loginResponse.accessToken);
       this.router.navigate(['home']);
     } else {
       this.store.dispatch(fromLogin.loggedFailed({ error: loginResponse.error }));

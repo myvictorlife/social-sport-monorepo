@@ -12,6 +12,8 @@ import { environment } from '@lessor-environment';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { CoreModule } from './core/core.module';
 import { EffectsModule } from '@ngrx/effects';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InterceptorProvider } from './providers/interceptor/interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,7 +31,10 @@ import { EffectsModule } from '@ngrx/effects';
     EffectsModule.forRoot([]),
     CoreModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorProvider, multi: true}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
