@@ -1,7 +1,8 @@
 
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { catchError, EMPTY, map, switchMap } from 'rxjs';
+import { catchError, map, switchMap } from 'rxjs/operators';
+import { of } from 'rxjs';
 import { ProfileService } from '../../services/profile/profile.service';
 
 import * as fromProfileActions from './profile.actions';
@@ -15,7 +16,7 @@ export class ProfileEffects {
             switchMap(() => this.profileService.fetch()
                 .pipe(
                     map(lessorUser => fromProfileActions.addOrUpdateProfile({ lessorUser })),
-                    catchError(() => EMPTY)))
+                    catchError((error) => of(fromProfileActions.fetchProfileFailed({ error })))))
         ));
     constructor(private actions$: Actions, private profileService: ProfileService) { }
 }

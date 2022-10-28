@@ -18,4 +18,5 @@ export const initialState: State = {
 export const reducer = createReducer(
   initialState,
   on(fromProfile.addOrUpdateProfile, (state, { lessorUser }) => ({ ...state, user: lessorUser })),
+  on(fromProfile.fetchProfileFailed, (state, { error }) => ({ ...state, error })),
 );

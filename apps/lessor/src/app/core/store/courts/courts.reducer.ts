@@ -18,4 +18,5 @@ export const initialState: State = {
 export const reducer = createReducer(
   initialState,
   on(fromCourts.addOrUpdateCourts, (state, { courts }) => ({ ...state, courts })),
+  on(fromCourts.fetchCourtsFailed, (state, { error }) => ({ ...state, error, courts: [], loading: false })),
 );

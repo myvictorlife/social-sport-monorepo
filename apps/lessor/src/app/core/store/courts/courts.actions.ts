@@ -11,3 +11,8 @@ export const addOrUpdateCourts = createAction(
     props<{ courts: Court[] }>()
 );
 
+export const fetchCourtsFailed = createAction(
+    '[COURTS] Fetch Courts Failed',
+    props<{ error: any }>()
+);
+
