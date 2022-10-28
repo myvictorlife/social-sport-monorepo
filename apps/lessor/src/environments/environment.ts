@@ -8,6 +8,7 @@ export const environment = {
   paths: {
     login: '/signin',
     courts: '/api/courts',
+    courtsProviders: 'api/courts/{court_id}/providers',
     sportCenter: '/api/sport-center'
   }
 };

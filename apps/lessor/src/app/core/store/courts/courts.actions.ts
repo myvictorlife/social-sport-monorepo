@@ -16,3 +16,7 @@ export const fetchCourtsFailed = createAction(
     props<{ error: any }>()
 );
 
+export const setCourtSelected = createAction(
+    '[COURTS] Set City Selected',
+    props<{ court: Court }>()
+);

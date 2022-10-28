@@ -15,4 +15,9 @@ export class CourtService {
         const url = environment.baseUrl + environment.paths.courts;
         return this.http.get<Court[]>(url);
     }
+
+    fetchById(id: string): Observable<Court[]> {
+        const url = environment.baseUrl + environment.paths.courtsProviders.replace('{court_id}', id);
+        return this.http.get<Court[]>(url);
+    }
 }
