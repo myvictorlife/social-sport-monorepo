@@ -23,8 +23,8 @@ export class AuthLibComponent implements OnInit {
 
   constructor(private authService: AuthLibService) {
     this.loginForm = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl()
+      username: new FormControl('wakepark'),
+      password: new FormControl('486192')
     });
   }
 

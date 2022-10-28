@@ -1,0 +1,11 @@
+<ion-card *ngIf="court">
+    <ion-card-header>
+      <ion-card-title>{{ court.nome }}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+        <ion-img [src]="court.foto"></ion-img>
+        <br/>
+        Status: {{ court.status }}
+    </ion-card-content>
+  </ion-card>

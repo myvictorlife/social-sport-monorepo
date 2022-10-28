@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="user$ | async as user">
+    <br/>
+    Centro Esportivo: {{ user.nomeCentroEsportivo }} <br/>
+    CNPJ: {{ user.cnpj }} <br/>
+    Nome Completo: {{ user.responsavel.nomeCompleto }} <br/>
+    Celular: {{ user.responsavel.celular }} <br/>
+  </div>
+  <ion-button routerLink="/home">Voltar</ion-button>
+</ion-content>

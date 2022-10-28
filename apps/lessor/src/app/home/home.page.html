@@ -1,21 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Lessor
+      Bem Vindo!
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Lessor</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-    <ion-button [routerLink]="['/auth']">Test</ion-button>
-  </div>
+  <lessor-court-list [courtList]="courtList$ | async"></lessor-court-list>
+  <br/>
+  <ion-button routerLink="/profile"> Perfil </ion-button>
 </ion-content>
