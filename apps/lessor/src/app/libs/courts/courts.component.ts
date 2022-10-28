@@ -13,7 +13,7 @@ export class CourtsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.courtList)
+    console.log(this.courtList);
   }
 
 }

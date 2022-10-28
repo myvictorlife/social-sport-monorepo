@@ -15,7 +15,7 @@ import { IonicModule } from '@ionic/angular';
     declarations: [
         CourtsComponent,
         CourtComponent,
-        
+
     ],
     exports: [
         CourtsComponent,

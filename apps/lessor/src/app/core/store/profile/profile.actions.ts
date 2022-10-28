@@ -1,5 +1,5 @@
-import { createAction, props } from "@ngrx/store";
-import { LessorUser } from "entity-lib";
+import { createAction, props } from '@ngrx/store';
+import { LessorUser } from 'entity-lib';
 
 
 export const fetchProfile = createAction(

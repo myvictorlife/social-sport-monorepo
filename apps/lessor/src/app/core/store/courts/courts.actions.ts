@@ -1,5 +1,5 @@
-import { createAction, props } from "@ngrx/store";
-import { Court } from "entity-lib";
+import { createAction, props } from '@ngrx/store';
+import { Court } from 'entity-lib';
 
 
 export const fetchCourts = createAction(

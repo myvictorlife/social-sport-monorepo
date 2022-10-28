@@ -6,7 +6,7 @@ import * as fromLogin from '../core/store/login/login.actions';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-auth',
+  selector: 'lessor-auth',
   templateUrl: './auth.page.html',
   styleUrls: ['./auth.page.scss'],
 })

@@ -13,7 +13,7 @@ export const initialState: State = {
     loading: false,
     courts: [],
     error: null
-}
+};
 
 export const reducer = createReducer(
   initialState,

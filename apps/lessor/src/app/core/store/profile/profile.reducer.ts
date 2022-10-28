@@ -13,7 +13,7 @@ export const initialState: State = {
     loading: false,
     user: null,
     error: null
-}
+};
 
 export const reducer = createReducer(
   initialState,

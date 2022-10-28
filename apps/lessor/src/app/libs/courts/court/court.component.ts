@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
-import { Court } from "entity-lib";
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Court } from 'entity-lib';
 
 @Component({
     selector: 'lessor-court',

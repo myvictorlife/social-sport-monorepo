@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import * as fromCourtActions from '../core/store/courts/courts.actions';
 import { selectCourts } from '../core/store/courts/courts.seletors';
 @Component({
-  selector: 'app-home',
+  selector: 'lessor-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })

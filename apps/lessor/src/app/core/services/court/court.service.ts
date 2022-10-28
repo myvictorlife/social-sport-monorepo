@@ -10,7 +10,7 @@ export class CourtService {
     constructor(private http: HttpClient) {
 
     }
-    
+
     fetchAll(): Observable<Court[]> {
         const url = environment.baseUrl + environment.paths.courts;
         return this.http.get<Court[]>(url);

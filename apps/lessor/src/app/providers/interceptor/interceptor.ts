@@ -14,17 +14,19 @@ export class InterceptorProvider implements HttpInterceptor {
 
     private addToken(request: HttpRequest<any>, token: any) {
         if (token) {
-            let clone: HttpRequest<any>;
-            clone = request.clone({
+            const clone = request.clone({
                 setHeaders: {
+                    // eslint-disable-next-line @typescript-eslint/naming-convention
                     Accept: `application/json`,
+                    // eslint-disable-next-line @typescript-eslint/naming-convention
                     'Content-Type': `application/json`,
+                    // eslint-disable-next-line @typescript-eslint/naming-convention
                     Authorization: `Bearer ${token}`
                 }
             });
             return clone;
         }
-        return request; 
+        return request;
     }
 
 }

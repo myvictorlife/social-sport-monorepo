@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectProfile } from '../../core/store/profile/profile.selectors';
 import * as fromProfileActions from '../../core/store/profile/profile.actions';
- 
+
 @Component({
   selector: 'lessor-profile',
   templateUrl: './profile.page.html',
