@@ -6,6 +6,11 @@ export const fetchCourts = createAction(
     '[COURTS] Get Courts'
 );
 
+export const fetchCourtsById = createAction(
+    '[COURTS] Get Courts By Id',
+    props<{ id: string }>()
+);
+
 export const addOrUpdateCourts = createAction(
     '[COURTS] Set Courts',
     props<{ courts: Court[] }>()

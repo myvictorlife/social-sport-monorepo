@@ -18,5 +18,14 @@ export class CourtsEffects {
                     map(courts => fromCourts.addOrUpdateCourts({ courts })),
                     catchError((error) => of(fromCourts.fetchCourtsFailed({ error })))))
         ));
+
+    loadCourtById$ = createEffect(() => this.actions$
+        .pipe(
+            ofType(fromCourts.fetchCourtsById),
+            switchMap(({id}) => this.courtService.fetchById(id)
+                .pipe(
+                    map(courts => fromCourts.addOrUpdateCourts({ courts })),
+                    catchError((error) => of(fromCourts.fetchCourtsFailed({ error })))))
+        ));
     constructor(private actions$: Actions, private courtService: CourtService) { }
 }
