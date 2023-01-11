@@ -4,7 +4,7 @@ import { CourtsComponent } from './courts/courts.component';
 import { CourtComponent } from './courts/court/court.component';
 
 import { CommonModule } from '@angular/common';
-// import { MatCardModule } from '@angular/material/im';
+
 import { IonicModule } from '@ionic/angular';
 
 @NgModule({
@@ -14,8 +14,7 @@ import { IonicModule } from '@ionic/angular';
     ],
     declarations: [
         CourtsComponent,
-        CourtComponent,
-
+        CourtComponent
     ],
     exports: [
         CourtsComponent,

@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AuthLibService } from './auth-lib.service';
 
 import { AuthLibComponent } from './auth-lib.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('AuthLibComponent', () => {
   let component: AuthLibComponent;
@@ -8,7 +10,13 @@ describe('AuthLibComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AuthLibComponent ]
+      declarations: [ AuthLibComponent ],
+      imports: [
+        HttpClientModule
+      ],
+      providers: [
+        AuthLibService
+      ]
     })
     .compileComponents();
 

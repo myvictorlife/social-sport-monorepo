@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ (courtSelected$ | async)?.nome  }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="courtSelected$ | async  as court">
+
+  <div style="display: flex; align-items: center;justify-content: center;">
+    <ion-img style="width: 40%;" [src]="court.foto"></ion-img>
+  </div>
+  
+  <br/><br/>
+  <div style="display: flex; align-items: center;justify-content: center;">
+    <ion-datetime (ionChange)="changeDate($event)"></ion-datetime>
+  </div>
+ 
+  <!-- <div> {{ court | json  }} </div> -->
+  <br/>
+  {{ dateSelected }}
+  <ion-button (click)="redirectToHome()">Voltar</ion-button>
+</ion-content>

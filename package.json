@@ -36,6 +36,7 @@
     "build:admin:ios": "npm run remove:ios:admin && ionic capacitor build ios --project=admin --no-open",
     "build:all:ios": "npm run build:app:ios && npm run build:lessor:ios && npm run build:admin:ios",
     "test": "ng test",
+    "test:libs": "ng test --no-watch --code-coverage",
     "deploy:all:hosting": "npm run build:all && npm run copy:dist:folder && cd ./hosting && firebase deploy --only hosting",
     "deploy:firebase:pipeline": "npm run build:all && npm run copy:dist:folder",
     "copy:dist:folder": "cp -r ./dist ./hosting/",

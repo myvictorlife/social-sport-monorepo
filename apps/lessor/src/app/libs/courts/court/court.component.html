@@ -1,4 +1,4 @@
-<ion-card *ngIf="court">
+<ion-card *ngIf="court" (click)="goToCourtDetails()">
     <ion-card-header>
       <ion-card-title>{{ court.nome }}</ion-card-title>
     </ion-card-header>
@@ -8,4 +8,5 @@
         <br/>
         Status: {{ court.status }}
     </ion-card-content>
+    
   </ion-card>
